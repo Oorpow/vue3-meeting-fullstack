@@ -23,10 +23,10 @@
 							<NCheckbox>remember me</NCheckbox>
 							<NGradientText
 								gradient="linear-gradient(
-		225deg,
+		6deg,
 		rgba(2, 0, 36, 1) 0%,
-		rgba(9, 9, 121, 1) 0%,
-		rgba(0, 212, 255, 1) 100%
+		rgba(255, 190, 113, 1) 0%,
+		rgba(255, 98, 110, 1) 100%
 	)"
 								>create account</NGradientText
 							>
@@ -34,7 +34,9 @@
 						<div class="mt-[30px]">
 							<NButton
 								class="bg-custom-gradient border-0 text-white"
+								round
 								style="width: 100%"
+								@click="$router.push('/2173')"
 							>
 								Login
 							</NButton>
@@ -61,24 +63,6 @@ const loginForm = ref<LoginType.LoginForm>({
 	username: "",
 	password: "",
 });
-
-/** 用户提交登录表单 */
-function handleSubmit(data: {
-	values: Record<string, any>;
-	errors: Record<string, any> | undefined;
-}) {
-	console.log(data.values);
-}
 </script>
 
-<style scoped>
-.bg-custom-gradient {
-	background: rgb(2, 0, 36);
-	background: linear-gradient(
-		225deg,
-		rgba(2, 0, 36, 1) 0%,
-		rgba(9, 9, 121, 1) 0%,
-		rgba(0, 212, 255, 1) 100%
-	);
-}
-</style>
+<style scoped></style>

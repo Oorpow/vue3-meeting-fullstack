@@ -4,22 +4,27 @@ import type { RouteRecordRaw } from "vue-router";
 export const constantRoutes: RouteRecordRaw[] = [
 	{
 		path: "/login",
-		name: "login",
+		name: "Login",
 		component: () => import("@/views/Login/index.vue"),
 	},
 	{
 		path: "/register",
-		name: "register",
+		name: "Register",
 		component: () => import("@/views/Register/index.vue"),
 	},
 	{
 		path: "/",
-		name: "home",
+		name: "Home",
 		component: () => import("@/views/HomeView.vue"),
 	},
 	{
 		path: "/about",
-		name: "about",
+		name: "About",
 		component: () => import("@/views/AboutView.vue"),
+	},
+	{
+		path: "/:pathMatch(.*)*",
+		name: "NotFound",
+		component: () => import("@/views/Error/404.vue"),
 	},
 ];
