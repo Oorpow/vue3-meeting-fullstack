@@ -10,8 +10,7 @@ declare namespace LoginType {
 
 	/** 注册表单 */
 	type RegisterForm = {
-		nickname?: string;
-		confirmPassword: string;
+		nickname: string;
 		email: string;
 		verifyCode: string;
 	} & FormCommon;
